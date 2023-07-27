@@ -1,5 +1,5 @@
 .home__container{
-    row-gap: 6rem;
+    row-gap: 5rem;
 }
 
 .home__content{
@@ -86,6 +86,7 @@
 }
 
 .home__scroll{
+    margin-bottom: 2rem;
     margin-left: 9.25rem;
 }
 
