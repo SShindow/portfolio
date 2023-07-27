@@ -44,7 +44,7 @@
     display: block;
 }
 
-/* For Experience */
+/*==================== EXPERIENCE ====================*/
 .qualification-exp__data{
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
@@ -144,7 +144,7 @@
 
 .qualification-exp__modal-icon{
     font-size: 1.1rem;
-    color: #00C9A7;
+    color: #00CEEF;
 }
 
 .qualification-exp__modal-heading{
@@ -206,7 +206,7 @@
 }
 
 
-/* For Education */
+/*==================== EDUCATION ====================*/
 .qualification-edu__container{
     grid-template-columns: repeat(3, 300px);
     justify-content: center;
@@ -318,7 +318,7 @@
 
 .qualification-edu__modal-icon{
     font-size: 1.1rem;
-    color: #00C9A7;
+    color: #faae2b;
 }
 
 .qualification-edu__modal-heading{
@@ -375,6 +375,208 @@
     }
 
     .qualification-edu__content{
+        padding-right: 6rem;
+    }
+}
+
+/*==================== CERTIFICATES ====================*/
+.qualification-certi__carousel{
+    padding: 1.5rem;
+    margin: 1rem;
+    color: #fff;
+    max-width: 1000px;
+    max-height: 500px
+    
+}
+
+.qualification-certi__carousel-box{
+    background-color: var(--container-color);
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.slick-slide div{
+    margin: 0 1.5rem;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    color: #b7b7b7;
+
+}
+
+.slick-list{
+    margin: 0 1.5rem;
+    margin-right: 4.5rem;
+}
+
+
+.qualification-certi__content{
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--container-color);
+    /* padding: 3.5rem 2.5rem; */
+    border-radius: 20px;
+    cursor: pointer;
+    min-height: 300px;
+}
+
+.qualification-certi__img{
+    display: block;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.qualification-certi__title{
+    font-size: 1rem;
+    font-weight: var(--font-medium);
+    margin: var(--mb-1);
+    text-align: center;
+    justify-content: center;
+}
+
+.qualification-certi__button{
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    cursor: pointer;
+    margin-top: var(--mb-1);
+}
+
+.qualification-certi__button-icon{
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.qualification-certi__button:hover .qualification-certi__button-icon{
+    transform: translateX(00.25rem);
+}
+
+.qualification-certi__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: var(--z-modal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.qualification-certi__modal-content{
+    width: 700px;
+    position: relative;
+    background-color: var(--container-color);
+    padding: 3.25rem 2.5rem 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.qualification-certi__modal-close{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.qualification-certi__modal-title,
+.qualification-certi__modal-description{
+    text-align: center;
+}
+
+.qualification-certi__modal-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.qualification-certi__modal-description{
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-2);
+    padding: 0;
+}
+
+.qualification-certi__modal-qualification{
+    row-gap: 0.75rem;
+}
+
+.qualification-certi__modal-service{
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+}
+
+.qualification-certi__modal-icon{
+    font-size: 1.1rem;
+    color: #faae2b;
+}
+
+.qualification-certi__modal-heading{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.qualification-certi__modal-info{
+    font-size: var(--small-font-size);
+}
+
+/* Active modal */
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Breakpoints */
+/* For large devices */
+@media screen and (max-width: 992px){
+    .qualification-certi__container{
+        grid-template-columns: repeat(3, 218px);
+    }
+}
+
+  /* For medium devices */
+@media screen and (max-width: 768px){
+    .qualification-certi__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .qualification-certi__content{
+        padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+    }
+
+    .qualification-certi__icon{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .qualification-certi__modal-content{
+        padding: 4.5rem 1.5rem 2.5rem;
+    }
+
+    .qualification-certi__modal-description{
+        padding: 0;
+    }
+}
+
+  /* For small devices */
+@media screen and (max-width: 350px){
+    .qualification-certi__container{
+        grid-template-columns: max-content;
+    }
+
+    .qualification-certi__content{
         padding-right: 6rem;
     }
 }

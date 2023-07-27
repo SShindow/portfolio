@@ -1,8 +1,15 @@
 import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./qualification.css";
 import FRAUAS from "../../assets/frauas.png";
 import VGU from "../../assets/vgu.png";
 import NQ from "../../assets/nq.png";
+import COURSERA from "../../assets/coursera.png";
+import HACKERRANK from "../../assets/hackerrank.png";
+import IELTS from "../../assets/ielts.pdf";
+import BC from "../../assets/britishcouncil.jpg";
 
 const Qualification = () => {
   // For 3 categories
@@ -24,6 +31,49 @@ const Qualification = () => {
 
   const expToggleTab = (index) => {
     setExpToggleState(index);
+  };
+
+  // for Certification
+  const [certiToggleState, setCertiToggleState] = useState(0);
+
+  const certiToggleTab = (index) => {
+    setCertiToggleState(index);
+  };
+
+  // Carousel setting
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -117,7 +167,6 @@ const Qualification = () => {
                     </h3>
 
                     <ul className="qualification-edu__modal-services grid">
-
                       <li className="qualification-edu__modal-service">
                         <h4 className="qualification-edu__modal-heading">
                           Durarion:{" "}
@@ -142,15 +191,17 @@ const Qualification = () => {
                         </h4>
                       </li>
                       <li className="qualification-edu__modal-service">
-                      <i class="uil uil-check-circle qualification-edu__modal-icon"></i>
+                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
-                        Gold Medal - Mathematics - April Olympics Competition 2018
+                          Gold Medal - Mathematics - April Olympics Competition
+                          2018
                         </p>
                       </li>
                       <li className="qualification-edu__modal-service">
-                      <i class="uil uil-check-circle qualification-edu__modal-icon"></i>
+                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
-                        Bronze Medal - Mathematics - April Olympics Competition 2017
+                          Bronze Medal - Mathematics - April Olympics
+                          Competition 2017
                         </p>
                       </li>
                     </ul>
@@ -242,33 +293,32 @@ const Qualification = () => {
                       </li>
 
                       <li className="qualification-edu__modal-service">
-                        <i class="uil uil-check-circle qualification-edu__modal-icon"></i>
+                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
-                        DAAD Sur-place Scholarship Winter Semester 2021
+                          DAAD Sur-place Scholarship Winter Semester 2021
                         </p>
                       </li>
 
                       <li className="qualification-edu__modal-service">
-                        <i class="uil uil-check-circle qualification-edu__modal-icon"></i>
+                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
-                        VGU Merit Scholarship of 30% (academic year 2021/2022)
+                          VGU Merit Scholarship of 30% (academic year 2021/2022)
                         </p>
                       </li>
 
                       <li className="qualification-edu__modal-service">
-                        <i class="uil uil-check-circle qualification-edu__modal-icon"></i>
+                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
-                        DAAD Sur-place Scholarship 2020/2021
+                          DAAD Sur-place Scholarship 2020/2021
                         </p>
                       </li>
 
                       <li className="qualification-edu__modal-service">
-                        <i class="uil uil-check-circle qualification-edu__modal-icon"></i>
+                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
-                        VGU Merit Scholarship of 30% (academic year 2020/2021)
+                          VGU Merit Scholarship of 30% (academic year 2020/2021)
                         </p>
                       </li>
-
                     </ul>
                   </div>
                 </div>
@@ -355,7 +405,7 @@ const Qualification = () => {
                         <h4 className="qualification-edu__modal-heading">
                           Activites:{" "}
                         </h4>
-                        <i class="uil uil-check-circle qualification-edu__modal-icon"></i>
+                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
                           DAAD scholarship for a full-aided exchange semester
                           (from 09/2021 to 03/2022) in Germany .
@@ -364,7 +414,7 @@ const Qualification = () => {
                     </ul>
                   </div>
                 </div>
-              </div>   
+              </div>
             </div>
           </div>
 
@@ -406,23 +456,28 @@ const Qualification = () => {
                     <h3 className="qualification-exp__modal-title">
                       Software Engineer
                     </h3>
-                    <p className="qualification-exp__modal-description">Microsoft</p>
+                    <p className="qualification-exp__modal-description">
+                      Microsoft
+                    </p>
 
                     <ul className="qualification-exp__modal-services grid">
                       <li className="qualification-exp__modal-service">
-                          <h4 className="qualification-exp__modal-heading">
-                            Durarion:{" "}
-                          </h4>
-                          <p className="qualification-exp__modal-info">
-                            2016 - 2019
-                          </p>
-                          
-                          <h4 style={{marginLeft: "30%"}}className="qualification-exp__modal-heading">
-                            Location:{" "}
-                          </h4>
-                          <p className="qualification-exp__modal-info">
-                            Ho Chi Minh City, Vietnam
-                          </p>
+                        <h4 className="qualification-exp__modal-heading">
+                          Durarion:{" "}
+                        </h4>
+                        <p className="qualification-exp__modal-info">
+                          2016 - 2019
+                        </p>
+
+                        <h4
+                          style={{ marginLeft: "30%" }}
+                          className="qualification-exp__modal-heading"
+                        >
+                          Location:{" "}
+                        </h4>
+                        <p className="qualification-exp__modal-info">
+                          Ho Chi Minh City, Vietnam
+                        </p>
                       </li>
 
                       <li className="qualification-exp__modal-service">
@@ -430,7 +485,9 @@ const Qualification = () => {
                           Skills:{" "}
                         </h4>
                         <p className="qualification-exp__modal-info">
-                        Data Modeling · Data Pipelines · Extract, Transform, Load (ETL) · Azure Data Factory · SQL · Microsoft SQL Server · Microsoft Azure · Data Warehousing
+                          Data Modeling · Data Pipelines · Extract, Transform,
+                          Load (ETL) · Azure Data Factory · SQL · Microsoft SQL
+                          Server · Microsoft Azure · Data Warehousing
                         </p>
                       </li>
 
@@ -440,27 +497,30 @@ const Qualification = () => {
                         </h4>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Support study and analyze business requirements. 
+                          Support study and analyze business requirements.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Operate and maintain data warehouse functionality. 
+                          Operate and maintain data warehouse functionality.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Integrate new data source and manage data pipelines from Salesforce, through staging, landing zone to the data warehouse.  
+                          Integrate new data source and manage data pipelines
+                          from Salesforce, through staging, landing zone to the
+                          data warehouse.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Manage data quality assurance and perform incremental load.  
+                          Manage data quality assurance and perform incremental
+                          load.
                         </p>
                       </li>
                     </ul>
@@ -486,9 +546,7 @@ const Qualification = () => {
                 <h3 className="qualification-exp__title">
                   Software Engineer Intern
                 </h3>
-                <span className="qualification-exp__subtitle">
-                  ABC
-                </span>
+                <span className="qualification-exp__subtitle">ABC</span>
                 <div className="qualification-exp__calendar">
                   <i class="uil uil-calendar-alt"></i> 2019 - 2022
                 </div>
@@ -516,23 +574,28 @@ const Qualification = () => {
                     <h3 className="qualification-exp__modal-title">
                       Software Engineer Intern
                     </h3>
-                    <p className="qualification-exp__modal-description">Microsoft</p>
+                    <p className="qualification-exp__modal-description">
+                      Microsoft
+                    </p>
 
                     <ul className="qualification-exp__modal-services grid">
                       <li className="qualification-exp__modal-service">
-                          <h4 className="qualification-exp__modal-heading">
-                            Durarion:{" "}
-                          </h4>
-                          <p className="qualification-exp__modal-info">
-                            2016 - 2019
-                          </p>
-                          
-                          <h4 style={{marginLeft: "30%"}}className="qualification-exp__modal-heading">
-                            Location:{" "}
-                          </h4>
-                          <p className="qualification-exp__modal-info">
-                            Ho Chi Minh City, Vietnam
-                          </p>
+                        <h4 className="qualification-exp__modal-heading">
+                          Durarion:{" "}
+                        </h4>
+                        <p className="qualification-exp__modal-info">
+                          2016 - 2019
+                        </p>
+
+                        <h4
+                          style={{ marginLeft: "30%" }}
+                          className="qualification-exp__modal-heading"
+                        >
+                          Location:{" "}
+                        </h4>
+                        <p className="qualification-exp__modal-info">
+                          Ho Chi Minh City, Vietnam
+                        </p>
                       </li>
 
                       <li className="qualification-exp__modal-service">
@@ -540,7 +603,9 @@ const Qualification = () => {
                           Skills:{" "}
                         </h4>
                         <p className="qualification-exp__modal-info">
-                        Data Modeling · Data Pipelines · Extract, Transform, Load (ETL) · Azure Data Factory · SQL · Microsoft SQL Server · Microsoft Azure · Data Warehousing
+                          Data Modeling · Data Pipelines · Extract, Transform,
+                          Load (ETL) · Azure Data Factory · SQL · Microsoft SQL
+                          Server · Microsoft Azure · Data Warehousing
                         </p>
                       </li>
 
@@ -550,42 +615,42 @@ const Qualification = () => {
                         </h4>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Support study and analyze business requirements. 
+                          Support study and analyze business requirements.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Operate and maintain data warehouse functionality. 
+                          Operate and maintain data warehouse functionality.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Integrate new data source and manage data pipelines from Salesforce, through staging, landing zone to the data warehouse.  
+                          Integrate new data source and manage data pipelines
+                          from Salesforce, through staging, landing zone to the
+                          data warehouse.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Manage data quality assurance and perform incremental load.  
+                          Manage data quality assurance and perform incremental
+                          load.
                         </p>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              
             </div>
 
             <div className="qualification-exp__data">
               <div>
                 <h3 className="qualification-exp__title">Content Creator</h3>
-                <span className="qualification-exp__subtitle">
-                  Freelancer
-                </span>
+                <span className="qualification-exp__subtitle">Freelancer</span>
                 <div className="qualification-exp__calendar">
                   <i class="uil uil-calendar-alt"></i> 2016 - 2019
                 </div>
@@ -613,23 +678,28 @@ const Qualification = () => {
                     <h3 className="qualification-exp__modal-title">
                       Content Creator
                     </h3>
-                    <p className="qualification-exp__modal-description">Microsoft</p>
+                    <p className="qualification-exp__modal-description">
+                      Microsoft
+                    </p>
 
                     <ul className="qualification-exp__modal-services grid">
                       <li className="qualification-exp__modal-service">
-                          <h4 className="qualification-exp__modal-heading">
-                            Durarion:{" "}
-                          </h4>
-                          <p className="qualification-exp__modal-info">
-                            2016 - 2019
-                          </p>
-                          
-                          <h4 style={{marginLeft: "30%"}}className="qualification-exp__modal-heading">
-                            Location:{" "}
-                          </h4>
-                          <p className="qualification-exp__modal-info">
-                            Ho Chi Minh City, Vietnam
-                          </p>
+                        <h4 className="qualification-exp__modal-heading">
+                          Durarion:{" "}
+                        </h4>
+                        <p className="qualification-exp__modal-info">
+                          2016 - 2019
+                        </p>
+
+                        <h4
+                          style={{ marginLeft: "30%" }}
+                          className="qualification-exp__modal-heading"
+                        >
+                          Location:{" "}
+                        </h4>
+                        <p className="qualification-exp__modal-info">
+                          Ho Chi Minh City, Vietnam
+                        </p>
                       </li>
 
                       <li className="qualification-exp__modal-service">
@@ -637,7 +707,9 @@ const Qualification = () => {
                           Skills:{" "}
                         </h4>
                         <p className="qualification-exp__modal-info">
-                        Data Modeling · Data Pipelines · Extract, Transform, Load (ETL) · Azure Data Factory · SQL · Microsoft SQL Server · Microsoft Azure · Data Warehousing
+                          Data Modeling · Data Pipelines · Extract, Transform,
+                          Load (ETL) · Azure Data Factory · SQL · Microsoft SQL
+                          Server · Microsoft Azure · Data Warehousing
                         </p>
                       </li>
 
@@ -647,27 +719,30 @@ const Qualification = () => {
                         </h4>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Support study and analyze business requirements. 
+                          Support study and analyze business requirements.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Operate and maintain data warehouse functionality. 
+                          Operate and maintain data warehouse functionality.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Integrate new data source and manage data pipelines from Salesforce, through staging, landing zone to the data warehouse.  
+                          Integrate new data source and manage data pipelines
+                          from Salesforce, through staging, landing zone to the
+                          data warehouse.
                         </p>
                       </li>
                       <li className="qualification-exp__modal-service">
-                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <i class="bx bx-task qualification-exp__modal-icon"></i>
                         <p className="qualification-exp__modal-info">
-                        Manage data quality assurance and perform incremental load.  
+                          Manage data quality assurance and perform incremental
+                          load.
                         </p>
                       </li>
                     </ul>
@@ -689,59 +764,216 @@ const Qualification = () => {
                 : "qualification__content"
             }
           >
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Mo phat dcm </h3>
-                <span className="qualification__subtitle"></span>
-                <div className="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i>
+            <div className="qualification-certi__carousel">
+              <Slider {...settings}>
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/AFK55Y6X38AK" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={COURSERA}
+                      alt="Coursera"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      Introduction to Frontend Development
+                    </h3>
+                  </a>
+
+                  {/* <div
+                    className={
+                      certiToggleState === 1
+                        ? "qualification-certi__modal active-modal"
+                        : "qualification-certi__modal"
+                    }
+                  >
+                    <div className="qualification-certi__modal-content">
+                      <i
+                        onClick={() => certiToggleTab(0)}
+                        class="uil uil-times qualification-certi__modal-close"
+                      ></i>
+
+                      <h3 className="qualification-certi__modal-title">
+                        Frontend Developer
+                      </h3>
+                      <p className="qualification-certi__modal-description">
+                        "Primary focus on the client-side of development,
+                        ensuring seamless user experiences and optimal
+                        performance across different devices and browsers"
+                      </p>
+
+                      <ul className="qualification-certi__modal-services grid">
+                        <li className="qualification-certi__modal-service">
+                          <i class="uil uil-check-circle qualification-certi__modal-icon"></i>
+                          <p className="qualification-certi__modal-info">
+                            Implement web designs and UI mockups
+                          </p>
+                        </li>
+
+                        <li className="qualification-certi__modal-service">
+                          <i class="uil uil-check-circle qualification-certi__modal-icon"></i>
+                          <p className="qualification-certi__modal-info">
+                            Develop responsive UI across devices
+                          </p>
+                        </li>
+
+                        <li className="qualification-certi__modal-service">
+                          <i class="uil uil-check-circle qualification-certi__modal-icon"></i>
+                          <p className="qualification-certi__modal-info">
+                            Create interactive and intuitive features
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div> */}
                 </div>
-              </div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div></div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification__title">
-                  Vietnamese-German University
-                </h3>
-                <span className="qualification__subtitle">
-                  Bachelor of Science in Computer Science
-                </span>
-                <div className="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  2019 - Present
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/B5NQX322Z65W" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={COURSERA}
+                      alt="Coursera"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      Programming with JavaScript
+                    </h3>
+                  </a>
                 </div>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Ngo Quyen High School</h3>
-                <span className="qualification__subtitle">
-                  High School Degree
-                </span>
-                <div className="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  2016 - 2019
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/KTKD4TAATKX6" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={COURSERA}
+                      alt="Coursera"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      Version Control
+                    </h3>
+                  </a>
                 </div>
-              </div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/U7UA4KS22N4G" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={COURSERA}
+                      alt="Coursera"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      React Basics
+                    </h3>
+                  </a>
+                </div>
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/MWBGTY96N6M5" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={COURSERA}
+                      alt="Coursera"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      HTML and CSS in depth
+                    </h3>
+                  </a>
+                </div>
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/L2MZSU55WCR6" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={COURSERA}
+                      alt="Coursera"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      Principles of UX/UI Design
+                    </h3>
+                  </a>
+                </div>
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/USNYCUR2Z8SG" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={COURSERA}
+                      alt="Coursera"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      Foundations of User Experience (UX) Design
+                    </h3>
+                  </a>
+                </div>
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.hackerrank.com/certificates/1ba8172d7a10" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={HACKERRANK}
+                      alt="Hackerrank"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      JavaScript (Intermediate)
+                    </h3>
+                  </a>
+                </div>
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href="https://www.hackerrank.com/certificates/be95865eeae2" 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={HACKERRANK}
+                      alt="Hackerrank"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      CSS (Basic)
+                    </h3>
+                  </a>
+                </div>
+                <div
+                  className="qualification-certi__content"
+                  onClick={() => certiToggleTab(1)}
+                >
+                  <a href= {IELTS} 
+                    target="_blank"  className="qualification-certi__link" rel="noreferrer">
+                    <img
+                      src={BC}
+                      alt="British Council"
+                      className="qualification-certi__img"
+                    ></img>
+                    <h3 className="qualification-certi__title">
+                      IELTS 7.0
+                    </h3>
+                  </a>
+                </div>
+              </Slider>
             </div>
           </div>
         </div>
