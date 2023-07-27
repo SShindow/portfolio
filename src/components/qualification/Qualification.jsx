@@ -410,32 +410,29 @@ const Qualification = () => {
 
                     <ul className="qualification-exp__modal-services grid">
                       <li className="qualification-exp__modal-service">
-                        <h4 className="qualification-exp__modal-heading">
-                          Durarion:{" "}
-                        </h4>
-                        <p className="qualification-exp__modal-info">
-                          2016 - 2019
-                        </p>
-                      </li>
-
-                      <li className="qualification-exp__modal-service">
-                        <h4 className="qualification-exp__modal-heading">
-                          Location:{" "}
-                        </h4>
-                        <p className="qualification-exp__modal-info">
-                          Ho Chi Minh City, Vietnam
-                        </p>
+                          <h4 className="qualification-exp__modal-heading">
+                            Durarion:{" "}
+                          </h4>
+                          <p className="qualification-exp__modal-info">
+                            2016 - 2019
+                          </p>
+                          
+                          <h4 style={{marginLeft: "30%"}}className="qualification-exp__modal-heading">
+                            Location:{" "}
+                          </h4>
+                          <p className="qualification-exp__modal-info">
+                            Ho Chi Minh City, Vietnam
+                          </p>
                       </li>
 
                       <li className="qualification-exp__modal-service">
                         <h4 className="qualification-exp__modal-heading">
                           Skills:{" "}
                         </h4>
-                      </li>
-
-                      <p className="qualification-exp__modal-info">
+                        <p className="qualification-exp__modal-info">
                         Data Modeling · Data Pipelines · Extract, Transform, Load (ETL) · Azure Data Factory · SQL · Microsoft SQL Server · Microsoft Azure · Data Warehousing
                         </p>
+                      </li>
 
                       <li className="qualification-exp__modal-service">
                         <h4 className="qualification-exp__modal-heading">
@@ -502,6 +499,83 @@ const Qualification = () => {
                   Show more
                   <i class="bx bx-chevron-right qualification-edu__button-icon"></i>
                 </span>
+
+                <div
+                  className={
+                    expToggleState === 2
+                      ? "qualification-exp__modal active-modal"
+                      : "qualification-exp__modal"
+                  }
+                >
+                  <div className="qualification-exp__modal-content">
+                    <i
+                      onClick={() => expToggleTab(0)}
+                      class="uil uil-times qualification-exp__modal-close"
+                    ></i>
+
+                    <h3 className="qualification-exp__modal-title">
+                      Software Engineer Intern
+                    </h3>
+                    <p className="qualification-exp__modal-description">Microsoft</p>
+
+                    <ul className="qualification-exp__modal-services grid">
+                      <li className="qualification-exp__modal-service">
+                          <h4 className="qualification-exp__modal-heading">
+                            Durarion:{" "}
+                          </h4>
+                          <p className="qualification-exp__modal-info">
+                            2016 - 2019
+                          </p>
+                          
+                          <h4 style={{marginLeft: "30%"}}className="qualification-exp__modal-heading">
+                            Location:{" "}
+                          </h4>
+                          <p className="qualification-exp__modal-info">
+                            Ho Chi Minh City, Vietnam
+                          </p>
+                      </li>
+
+                      <li className="qualification-exp__modal-service">
+                        <h4 className="qualification-exp__modal-heading">
+                          Skills:{" "}
+                        </h4>
+                        <p className="qualification-exp__modal-info">
+                        Data Modeling · Data Pipelines · Extract, Transform, Load (ETL) · Azure Data Factory · SQL · Microsoft SQL Server · Microsoft Azure · Data Warehousing
+                        </p>
+                      </li>
+
+                      <li className="qualification-exp__modal-service">
+                        <h4 className="qualification-exp__modal-heading">
+                          Responsibilities:{" "}
+                        </h4>
+                      </li>
+                      <li className="qualification-exp__modal-service">
+                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <p className="qualification-exp__modal-info">
+                        Support study and analyze business requirements. 
+                        </p>
+                      </li>
+                      <li className="qualification-exp__modal-service">
+                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <p className="qualification-exp__modal-info">
+                        Operate and maintain data warehouse functionality. 
+                        </p>
+                      </li>
+                      <li className="qualification-exp__modal-service">
+                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <p className="qualification-exp__modal-info">
+                        Integrate new data source and manage data pipelines from Salesforce, through staging, landing zone to the data warehouse.  
+                        </p>
+                      </li>
+                      <li className="qualification-exp__modal-service">
+                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <p className="qualification-exp__modal-info">
+                        Manage data quality assurance and perform incremental load.  
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               
             </div>
@@ -522,6 +596,83 @@ const Qualification = () => {
                   Show more
                   <i class="bx bx-chevron-right qualification-edu__button-icon"></i>
                 </span>
+
+                <div
+                  className={
+                    expToggleState === 3
+                      ? "qualification-exp__modal active-modal"
+                      : "qualification-exp__modal"
+                  }
+                >
+                  <div className="qualification-exp__modal-content">
+                    <i
+                      onClick={() => expToggleTab(0)}
+                      class="uil uil-times qualification-exp__modal-close"
+                    ></i>
+
+                    <h3 className="qualification-exp__modal-title">
+                      Content Creator
+                    </h3>
+                    <p className="qualification-exp__modal-description">Microsoft</p>
+
+                    <ul className="qualification-exp__modal-services grid">
+                      <li className="qualification-exp__modal-service">
+                          <h4 className="qualification-exp__modal-heading">
+                            Durarion:{" "}
+                          </h4>
+                          <p className="qualification-exp__modal-info">
+                            2016 - 2019
+                          </p>
+                          
+                          <h4 style={{marginLeft: "30%"}}className="qualification-exp__modal-heading">
+                            Location:{" "}
+                          </h4>
+                          <p className="qualification-exp__modal-info">
+                            Ho Chi Minh City, Vietnam
+                          </p>
+                      </li>
+
+                      <li className="qualification-exp__modal-service">
+                        <h4 className="qualification-exp__modal-heading">
+                          Skills:{" "}
+                        </h4>
+                        <p className="qualification-exp__modal-info">
+                        Data Modeling · Data Pipelines · Extract, Transform, Load (ETL) · Azure Data Factory · SQL · Microsoft SQL Server · Microsoft Azure · Data Warehousing
+                        </p>
+                      </li>
+
+                      <li className="qualification-exp__modal-service">
+                        <h4 className="qualification-exp__modal-heading">
+                          Responsibilities:{" "}
+                        </h4>
+                      </li>
+                      <li className="qualification-exp__modal-service">
+                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <p className="qualification-exp__modal-info">
+                        Support study and analyze business requirements. 
+                        </p>
+                      </li>
+                      <li className="qualification-exp__modal-service">
+                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <p className="qualification-exp__modal-info">
+                        Operate and maintain data warehouse functionality. 
+                        </p>
+                      </li>
+                      <li className="qualification-exp__modal-service">
+                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <p className="qualification-exp__modal-info">
+                        Integrate new data source and manage data pipelines from Salesforce, through staging, landing zone to the data warehouse.  
+                        </p>
+                      </li>
+                      <li className="qualification-exp__modal-service">
+                      <i class="uil uil-check-circle qualification-exp__modal-icon"></i>
+                        <p className="qualification-exp__modal-info">
+                        Manage data quality assurance and perform incremental load.  
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <div>
