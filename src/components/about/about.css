@@ -10,6 +10,13 @@
     justify-self: center;
 }
 
+.about__caption{
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-top: var(--mb-0-5);
+    margin-left: 4.8rem;
+}
+
 .about__info{
     grid-template-columns: repeat(3, 140px);
     gap: 0.5rem;
@@ -50,6 +57,10 @@
 .about__container{
     grid-template-columns: 1fr;
     row-gap: 2.5rem;
+}
+
+.about__caption{
+    display: none;
 }
 
 .about__img{

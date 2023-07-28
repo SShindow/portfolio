@@ -11,16 +11,25 @@ const About = () => {
       <span className="section__subtitle">My introduction</span>
 
       <div className="about__container container grid">
-        <img src={AboutImg} alt="" className="about__img" />
+        <div className="about__data">
+          <img src={AboutImg} alt="" className="about__img" />
+          <p className="about__caption">Me in Heidelberg, Germany</p>
+        </div>
 
         <div className="about__data">
-          <Info />
-
+        <Info />
           <p className="about__description">
-            I am a senior who is always seeking opportunities for further
-            self-development and is willing to reach further in the future.
-            My goal is to be a software developer, to make surfing and experiencing the internet
-            more interesting.
+            I am a senior majors in Computer Science in Vietnam. 
+            I enjoy working on websites and application development. 
+            I also have interest in User Experience and User Interface design.
+            <br />
+            <br />
+            I am a lifelong learner, inconsistent reader, and a crappy gamer. 
+            I am always seeking opportunities for further self development and reach further in the future.
+            <br />
+            <br />
+            I am currently openning to work for a software engineer - web developer - ux/ui designer
+            as an intern/fresher and willing to contribute my best. 
           </p>
 
           <a download="" href={Resume} className="button button--flex">

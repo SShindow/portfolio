@@ -69,8 +69,8 @@ const Data = () => {
         <span><Cursor/></span>
       </h3>
       
-      <p className="home__description">I am a Software Engineer based in Ho Chi Minh City,
-      and I am very passionate with my work!</p>
+      <p className="home__description">Welcome to my portfolio! I am a Senior majoring in Computer Science 
+      based in Ho Chi Minh City, and I am very passionate with my work!</p>
       <a href="#contact" className="button button--flex">
         Say Hello
         <svg
