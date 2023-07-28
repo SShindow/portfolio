@@ -1,9 +1,18 @@
 import React from "react";
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const Data = () => {
+  const [text] = useTypewriter({
+    words: ['Developer', 'UX/UI Designer'],
+    loop: 0 | false,
+    typeSpeed: 100,
+    deleteSpeed: 150,
+    delaySpeed: 1000,
+  });
+
   return (
     <div className="home__data">
-      <h1 className="home__title">
+      <h1 className="home__title"> 
         Hai Cao Xuan
         <svg
           width="36"
@@ -55,7 +64,11 @@ const Data = () => {
           ></path>
         </svg>
       </h1>
-      <h3 className="home__subtitle">Software Engineer</h3>
+      <h3 className="home__subtitle"> I'm a
+        <span> {text}</span>
+        <span><Cursor/></span>
+      </h3>
+      
       <p className="home__description">I am a Software Engineer based in Ho Chi Minh City,
       and I am very passionate with my work!</p>
       <a href="#contact" className="button button--flex">

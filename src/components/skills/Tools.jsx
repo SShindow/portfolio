@@ -1,5 +1,5 @@
 import React from 'react'
-import GIT from '../../assets/skills-to_git.svg'
+import GIT from '../../assets/skills-to_git.png'
 import NOTION from '../../assets/skills-to_notion.svg'
 import JIRA from '../../assets/skills-to_jira.svg'
 import DOCKER from '../../assets/skills-to_docker.svg'

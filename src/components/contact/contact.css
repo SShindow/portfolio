@@ -72,7 +72,7 @@
 .contact__form-div{
     position: relative;
     margin-bottom: var(--mb-2);
-    height: 3rem;
+    height: 4rem;
 }
 
 .contact__form-input{
@@ -101,12 +101,14 @@
 }
 
 .contact__form-area{
-    height: 10rem;
+    height: 13rem;
 }
 
 .contact__form-area textarea{
     resize: none;
 }
+
+
 
 /* Breakpoints */
 /* For large devices */
@@ -122,9 +124,23 @@
         grid-template-columns: 1fr;
         row-gap: 3rem;
     }
+
+    .contact__info{
+        justify-content: center;
+    }
+
+    .contact__form{
+        margin: 0 auto;
+    }
 }
 @media screen and (max-width: 576px){
+    .contact__info{
+        grid-template-columns: 1fr;
+    }
 
+    .contact__form{
+        width: 100%;
+    }
 }
 
 /* For small devices */
