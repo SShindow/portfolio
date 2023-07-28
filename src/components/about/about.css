@@ -18,8 +18,8 @@
 }
 
 .about__info{
-    grid-template-columns: repeat(3, 140px);
-    gap: 0.5rem;
+    grid-template-columns: repeat(3, 150px);
+    gap: 0.75rem;
     margin-bottom: var(--mb-2);
 }
 
@@ -34,7 +34,7 @@
 .about__icon{
     font-size: 1.5rem;
     color: var(--title-color);
-    margin-bottom: var(--mb-0-5);
+    margin-bottom: var(--mb-0-25);
 }
 
 .about__title{
@@ -47,8 +47,8 @@
 }
 
 .about__description{
-    padding: 0 4rem 0 0;
-    margin-bottom: var(--mb-2);
+    padding: 0 1rem 0 0;
+    margin-bottom: var(--mb-1);
 }
 
 /* Breakpoints */
