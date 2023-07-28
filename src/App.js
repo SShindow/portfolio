@@ -10,6 +10,7 @@ import Projects from './components/projects/Projects';
 import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import ScrollToTop from './components/scrolltotop/ScrollToTop';
 
 const App = () => {
   return (
@@ -25,8 +26,10 @@ const App = () => {
         <Projects />
         <Testimonials />
         <Contact />
-        <Footer />
       </main>
+      
+      <Footer />
+      <ScrollToTop />
     </>
   )
 }
