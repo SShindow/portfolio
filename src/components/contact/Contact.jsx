@@ -1,20 +1,126 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./contact.css";
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-    const form = useRef();
+// Mail sent notification
+//     const email_notify = () => toast.success('Mail sent successfully!', {
+//         position: "bottom-right",
+//         autoClose: 5000,
+//         hideProgressBar: false,
+//         closeOnClick: true,
+//         pauseOnHover: true,
+//         draggable: true,
+//         theme: "light",
+//         });
+// // Email Sending
+//     const form = useRef();
 
-    const sendEmail = (e) => {
+//     const sendEmail = (e) => {
+//     e.preventDefault();
+
+//     emailjs.sendForm('service_0tb2zmj', 'template_4h6pm7l', form.current, '4iWAWzfaPn5LXhQ22')
+//         e.target.reset();
+//     };
+// // Check form 
+// const [formData, setFormData] = useState({
+//     name: '',
+//     email: '',
+//     content: ''
+//   });
+
+//   const { name, email, content } = formData;
+
+//   const handleInputChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData({
+//       ...formData,
+//       [name]: value
+//     });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     if (name && email && content) {
+//       // Perform your action here, e.g., submitting the form data
+//       // if all fields are filled or show an error message if any field is empty.
+
+//       // Simulating a successful form submission
+//       setTimeout(() => {
+//         // Show a success toast message
+//         toast.success('Form submitted successfully!', {
+//           position: 'top-right',
+//           autoClose: 3000,
+//           hideProgressBar: false,
+//           closeOnClick: true,
+//           pauseOnHover: true,
+//           draggable: true,
+//           progress: undefined,
+//         });
+
+//         // Example: You can submit the form data here.
+//         // submitForm(formData);
+//       }, 1000);
+//     } else {
+//       // Show an error toast message indicating that all fields are required.
+//       toast.error('Please fill in all the required fields.', {
+//         position: 'top-right',
+//         autoClose: 3000,
+//         hideProgressBar: false,
+//         closeOnClick: true,
+//         pauseOnHover: true,
+//         draggable: true,
+//         progress: undefined,
+//       });
+//     }
+//   };
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_0tb2zmj', 'template_4h6pm7l', form.current, '4iWAWzfaPn5LXhQ22')
-        .then((result) => {
-        console.log(result.text);
-        }, (error) => {
-        console.log(error.text);
-        });
+    // Add your EmailJS configuration here
+    const serviceId = "service_0tb2zmj";
+    const templateId = "template_4h6pm7l";
+    const userId = "4iWAWzfaPn5LXhQ22";
+
+    // Validate the form fields
+    if (!name || !email || !message) {
+      toast.error("Please fill in all the required fields.");
+      return;
+    }
+
+    setIsLoading(true);
+
+    // Prepare the email data to send
+    const emailData = {
+        from_name: name,
+        to_email: email,
+        message: message,
     };
+
+    // Send the email using EmailJS
+    emailjs
+      .send(serviceId, templateId, emailData, userId)
+      .then((response) => {
+        toast.success("Email sent successfully!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        toast.error("Failed to send email. Please try again later.");
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
     return (
     <section className="contact section" id="contact">
       <h2 className="section__title">Contact Me</h2>
@@ -73,14 +179,17 @@ const Contact = () => {
         <div className="contact__content">
             <h3 className="contact__title">Inquiries</h3>
             <form className="contact__form"
-            ref={form} onSubmit={sendEmail}>
+            onSubmit={handleSubmit}>
             <div className="contact__form-div">
                 <label className="contact__form-tag">
                 Name
                 </label>
                 <input
                 type="text"
+                id="name"
                 name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="contact__form-input"
                 placeholder="Enter your name"
             />
@@ -92,27 +201,34 @@ const Contact = () => {
                 </label>
                 <input
                 type="email"
+                id="email"
                 name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="contact__form-input"
                 placeholder="Insert your email address"
             />
             </div>
 
             <div className="contact__form-div contact__form-area">
-                <label htmlFor="" className="contact__form-tag">
-                Content
+                <label htmlFor="message" className="contact__form-tag">
+                Message
                 </label>
                 <textarea
-                name="content"
+                id="message"
+                name="message"
                 cols="30"
                 rows="10"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="contact__form-input"
                 placeholder="Write your content here"
             ></textarea>
             </div>
 
-            <button className="button button--flex">
-                Send Message
+            <button type="submit" disabled={isLoading} 
+            className="button button--flex">
+                {isLoading ? "Sending..." : "Send Email"}
                 <svg
                 class="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -131,6 +247,7 @@ const Contact = () => {
                 ></path>
                 </svg>
             </button>
+            <ToastContainer/>
         </form>
         </div>
     </div>
