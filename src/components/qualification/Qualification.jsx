@@ -77,7 +77,7 @@ const Qualification = () => {
   };
 
   return (
-    <section className="qualification section" id="qualification">
+    <section className="qualification section">
       <h2 className="section__title">Qualification</h2>
       <span className="section__subtitle">My personal journey</span>
 
@@ -131,19 +131,19 @@ const Qualification = () => {
             <div className="qualification-edu__container container grid">
               <div className="qualification-edu__content">
                 <div>
-                  <img src={NQ} alt="" className="qualification-edu__img" />
+                  <img src={FRAUAS} alt="" className="qualification-edu__img" />
                   <h3 className="qualification-edu__title">
-                    Ngo Quyen High School
+                    Frankfurt University <br /> of Applied Science
                   </h3>
                   <div className="qualification-edu__calendar">
                     <i class="uil uil-calendar-alt"></i>
-                    2016 - 2019
+                    2019 - Present
                   </div>
                 </div>
 
                 <span
                   className="qualification-edu__button"
-                  onClick={() => eduToggleTab(1)}
+                  onClick={() => eduToggleTab(3)}
                 >
                   View more
                   <i class="bx bx-chevron-right qualification-edu__button-icon"></i>
@@ -151,7 +151,7 @@ const Qualification = () => {
 
                 <div
                   className={
-                    eduToggleState === 1
+                    eduToggleState === 3
                       ? "qualification-edu__modal active-modal"
                       : "qualification-edu__modal"
                   }
@@ -163,16 +163,37 @@ const Qualification = () => {
                     ></i>
 
                     <h3 className="qualification-edu__modal-title">
-                      Ngo Quyen High School
+                      Frankfurt University of Applied Science
                     </h3>
+                    <p className="qualification-edu__modal-description">
+                      Dual degree with Vietnamese-German University
+                    </p>
 
                     <ul className="qualification-edu__modal-services grid">
+                      <li className="qualification-edu__modal-service">
+                        <h4 className="qualification-edu__modal-heading">
+                          Degree, Major:{" "}
+                        </h4>
+                        <p className="qualification-edu__modal-info">
+                          Bachelor of Science, Computer Science
+                        </p>
+                      </li>
+
                       <li className="qualification-edu__modal-service">
                         <h4 className="qualification-edu__modal-heading">
                           Durarion:{" "}
                         </h4>
                         <p className="qualification-edu__modal-info">
-                          2016 - 2019
+                          2019 - Present
+                        </p>
+                      </li>
+
+                      <li className="qualification-edu__modal-service">
+                        <h4 className="qualification-edu__modal-heading">
+                          Grade:{" "}
+                        </h4>
+                        <p className="qualification-edu__modal-info">
+                          1.8 (German Grade) / 8.6 (Vietnamese Grade)
                         </p>
                       </li>
 
@@ -181,7 +202,7 @@ const Qualification = () => {
                           Location:{" "}
                         </h4>
                         <p className="qualification-edu__modal-info">
-                          Ho Chi Minh City, Vietnam
+                          Frankfurt am Main, Hesse, Germany
                         </p>
                       </li>
 
@@ -189,19 +210,10 @@ const Qualification = () => {
                         <h4 className="qualification-edu__modal-heading">
                           Activites:{" "}
                         </h4>
-                      </li>
-                      <li className="qualification-edu__modal-service">
                         <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
-                          Gold Medal - Mathematics - April Olympics Competition
-                          2018
-                        </p>
-                      </li>
-                      <li className="qualification-edu__modal-service">
-                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
-                        <p className="qualification-edu__modal-info">
-                          Bronze Medal - Mathematics - April Olympics
-                          Competition 2017
+                          DAAD scholarship for a full-aided exchange semester
+                          (from 09/2021 to 03/2022) in Germany .
                         </p>
                       </li>
                     </ul>
@@ -326,19 +338,19 @@ const Qualification = () => {
 
               <div className="qualification-edu__content">
                 <div>
-                  <img src={FRAUAS} alt="" className="qualification-edu__img" />
+                  <img src={NQ} alt="" className="qualification-edu__img" />
                   <h3 className="qualification-edu__title">
-                    Frankfurt University <br /> of Applied Science
+                    Ngo Quyen High School
                   </h3>
                   <div className="qualification-edu__calendar">
                     <i class="uil uil-calendar-alt"></i>
-                    2019 - Present
+                    2016 - 2019
                   </div>
                 </div>
 
                 <span
                   className="qualification-edu__button"
-                  onClick={() => eduToggleTab(3)}
+                  onClick={() => eduToggleTab(1)}
                 >
                   View more
                   <i class="bx bx-chevron-right qualification-edu__button-icon"></i>
@@ -346,7 +358,7 @@ const Qualification = () => {
 
                 <div
                   className={
-                    eduToggleState === 3
+                    eduToggleState === 1
                       ? "qualification-edu__modal active-modal"
                       : "qualification-edu__modal"
                   }
@@ -358,37 +370,16 @@ const Qualification = () => {
                     ></i>
 
                     <h3 className="qualification-edu__modal-title">
-                      Frankfurt University of Applied Science
+                      Ngo Quyen High School
                     </h3>
-                    <p className="qualification-edu__modal-description">
-                      Dual degree with Vietnamese-German University
-                    </p>
 
                     <ul className="qualification-edu__modal-services grid">
-                      <li className="qualification-edu__modal-service">
-                        <h4 className="qualification-edu__modal-heading">
-                          Degree, Major:{" "}
-                        </h4>
-                        <p className="qualification-edu__modal-info">
-                          Bachelor of Science, Computer Science
-                        </p>
-                      </li>
-
                       <li className="qualification-edu__modal-service">
                         <h4 className="qualification-edu__modal-heading">
                           Durarion:{" "}
                         </h4>
                         <p className="qualification-edu__modal-info">
-                          2019 - Present
-                        </p>
-                      </li>
-
-                      <li className="qualification-edu__modal-service">
-                        <h4 className="qualification-edu__modal-heading">
-                          Grade:{" "}
-                        </h4>
-                        <p className="qualification-edu__modal-info">
-                          1.8 (German Grade) / 8.6 (Vietnamese Grade)
+                          2016 - 2019
                         </p>
                       </li>
 
@@ -397,7 +388,7 @@ const Qualification = () => {
                           Location:{" "}
                         </h4>
                         <p className="qualification-edu__modal-info">
-                          Frankfurt am Main, Hesse, Germany
+                          Ho Chi Minh City, Vietnam
                         </p>
                       </li>
 
@@ -405,10 +396,19 @@ const Qualification = () => {
                         <h4 className="qualification-edu__modal-heading">
                           Activites:{" "}
                         </h4>
+                      </li>
+                      <li className="qualification-edu__modal-service">
                         <i class="uil uil-trophy qualification-edu__modal-icon"></i>
                         <p className="qualification-edu__modal-info">
-                          DAAD scholarship for a full-aided exchange semester
-                          (from 09/2021 to 03/2022) in Germany .
+                          Gold Medal - Mathematics - April Olympics Competition
+                          2018
+                        </p>
+                      </li>
+                      <li className="qualification-edu__modal-service">
+                        <i class="uil uil-trophy qualification-edu__modal-icon"></i>
+                        <p className="qualification-edu__modal-info">
+                          Bronze Medal - Mathematics - April Olympics
+                          Competition 2017
                         </p>
                       </li>
                     </ul>
