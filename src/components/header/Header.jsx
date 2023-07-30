@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 
 const Header = () => {
@@ -15,34 +15,46 @@ const Header = () => {
 
 
   /*==========================Dark Light Theme==========================*/
-  const themeButton = document.getElementById('theme-button');
-  const darkTheme = 'dark-theme';
-  const iconTheme = 'uil-sun';
+  // const [darkMode, setDarkMode] = useState(false);
+  const darkTheme = "dark-theme";
+  // const iconTheme = "uil-sun";
+  // const themeButton = document.getElementById("theme-button");
 
-  // Previously selected topic (if user selected)
-  const selectedTheme = localStorage.getItem('selected-theme');
-  const selectedIcon = localStorage.getItem('selected-icon');
+  // // Function to toggle dark mode
+  // const toggleDarkMode = () => {
+  //   setDarkMode((prevDarkMode) => !prevDarkMode);
+  // };
 
-  // We obtain the current theme that the interface has by validating the dark-theme class
-  const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-  const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
+  // // Effect to set the theme on initial load and whenever darkMode state changes
+  // useEffect(() => {
+  //   const selectedTheme = darkMode ? "dark" : "light";
+  //   const selectedIcon = darkMode ? "uil-moon" : "uil-sun";
 
-  // We validate if the user previously chose a topic
-  if (selectedTheme) {
-      // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-      document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-      themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
-  }
+  //   // Update the classList and localStorage
+  //   document.body.classList.toggle(darkTheme, darkMode);
+  //   themeButton.classList.toggle(iconTheme, darkMode);
+  //   localStorage.setItem("selected-theme", selectedTheme);
+  //   localStorage.setItem("selected-icon", selectedIcon);
+  // }, [darkMode]);
 
-  // Activate / deactivate the theme manually with the button
-  themeButton.addEventListener('click', () => {
-      // Add or remove the dark / icon theme
-      document.body.classList.toggle(darkTheme);
-      themeButton.classList.toggle(iconTheme);
-      // We save the theme and the current icon that the user chose
-      localStorage.setItem('selected-theme', getCurrentTheme());
-      localStorage.setItem('selected-icon', getCurrentIcon());
-  });
+  // Dark mode related state
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    setDarkMode((prevDarkMode) => !prevDarkMode);
+  };
+
+  // Effect to set the theme on initial load and whenever darkMode state changes
+  useEffect(() => {
+    const selectedTheme = darkMode ? "dark" : "light";
+    const selectedIcon = darkMode ? "uil-moon" : "uil-sun";
+
+    // Update the classList and localStorage
+    document.body.classList.toggle(darkTheme, darkMode);
+    localStorage.setItem("selected-theme", selectedTheme);
+    localStorage.setItem("selected-icon", selectedIcon);
+  }, [darkMode]);
 
   return (
     <header className="header">
@@ -114,15 +126,31 @@ const Header = () => {
           ></i>
         </div>
 
-        <div className="nav__btns">          
-          <div className="nav__change-theme">
-            <i class="uil uil-moon" id="theme-button"></i>
+          <div className="nav__btns">
+            <div className="nav__change-theme">
+              <button onClick={toggleDarkMode}>
+                <i className={darkMode ? "uil uil-sun" : "uil uil-moon"}></i>
+              </button>
+            </div>
+
+            <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
+              <i class="uil uil-apps"></i>
+            </div>
           </div>
 
-          <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-            <i class="uil uil-apps"></i>
+          {/* <div className="nav__btns">
+          <div className="nav__change-theme">
+            <button
+              onClick={toggleDarkMode}
+              className={darkMode ? "dark" : "light"}
+            >
+              <i className={darkMode ? "uil uil-sun" : "uil uil-moon"}></i>
+            </button>
           </div>
-        </div>
+        </div> */}
+
+
+
 
       </nav>
     </header>
