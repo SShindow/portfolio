@@ -26,7 +26,7 @@ const About = () => {
             <br />
             <br />
             I am currently openning to work for a software engineer - web developer - ux/ui designer
-            as an intern/fresher and willing to contribute my best. 
+            position as an intern/fresher and willing to contribute my best. 
           </p>
 
           <a download="" href={Resume} className="button button--flex">
