@@ -36,6 +36,15 @@
     transition: .3s;
 }
 
+.nav__change-theme{
+    color: var(--title-color);
+}
+
+.nav__change-theme:hover{
+    color: var(--title-color-dark);
+    cursor: pointer;
+}
+
 .nav__icon,
 .nav__close,
 .nav__toggle{
@@ -114,6 +123,12 @@
     .nav__close,
     .nav__toggle{
         display: block;
+    }
+
+    .nav__btns{
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
     }
 }
 
