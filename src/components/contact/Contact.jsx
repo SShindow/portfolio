@@ -3,6 +3,7 @@ import "./contact.css";
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CopyToClipboard from "react-copy-to-clipboard";
 
 const Contact = () => {
 
@@ -51,6 +52,29 @@ const Contact = () => {
     });
 };
 
+const email_copied = () => toast.success('Email Address Copied', {
+  position: "top-right",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "colored",
+  });
+
+const number_copied = () => toast.success('Phone Number Copied', {
+  position: "top-right",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "colored",
+  });
+
+
     return (
     <section className="contact section" id="contact">
         <h2 className="section__title">Contact Me</h2>
@@ -66,14 +90,19 @@ const Contact = () => {
 
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">hia.cao.2001@gmail.com</span>
-
-              <a
-                href="mailto:hia.cao.2001@gmail.com.com"
+              
+              <CopyToClipboard text="hia.cao.2001@gmail.com">
+              <div
                 className="contact__button"
+                onClick={email_copied}
               >
+                
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
+                </div>
+              </CopyToClipboard>
+
+
             </div>
 
             <div className="contact__card">
@@ -82,10 +111,16 @@ const Contact = () => {
               <h3 className="contact__card-title">Phone</h3>
               <span className="contact__card-data">+84 37973 1101</span>
 
-              <a href="" className="contact__button">
+              <CopyToClipboard text="+84379731101">
+              <div
+                className="contact__button"
+                onClick={number_copied}
+              >
+                
                 Call me{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
+                </div>
+              </CopyToClipboard>
             </div>
 
             <div className="contact__card">
@@ -97,9 +132,10 @@ const Contact = () => {
 
               <a
                 href="https://www.linkedin.com/in/haicaoxuan/"
-                className="contact__button"
+                target="_blank"
+                className="contact__button" rel="noreferrer"
               >
-                Text me{" "}
+                Connect me{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
@@ -181,7 +217,9 @@ const Contact = () => {
                 ></path>
                 </svg>
             </button>
-            <ToastContainer/>
+            <ToastContainer
+              theme="colored"
+            />
         </form>
         </div>
     </div>

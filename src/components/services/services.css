@@ -76,6 +76,14 @@
     cursor: pointer;
 }
 
+.services__modal-close:hover{
+    color: #FF5C6B;
+    transition: 0.5s;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+}
+
 .services__modal-title,
 .services__modal-description{
     text-align: center;
