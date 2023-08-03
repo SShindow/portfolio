@@ -345,14 +345,14 @@
 /* For large devices */
 @media screen and (max-width: 992px){
     .qualification-edu__container{
-        grid-template-columns: repeat(3, 218px);
+        grid-template-columns: 1fr;
     }
 }
 
   /* For medium devices */
 @media screen and (max-width: 768px){
     .qualification-edu__container{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .qualification-edu__content{
@@ -376,7 +376,7 @@
   /* For small devices */
 @media screen and (max-width: 350px){
     .qualification-edu__container{
-        grid-template-columns: max-content;
+        grid-template-columns: 1fr;
     }
 
     .qualification-edu__content{
