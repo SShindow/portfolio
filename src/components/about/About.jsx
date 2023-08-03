@@ -5,6 +5,7 @@ import Resume from "../../assets/Cao-Xuan-Hai_Resume.pdf";
 import Info from "./Info";
 
 const About = () => {
+
   return (
     <section className="about section" id="about">
       <h2 className="section__title">About Me</h2>

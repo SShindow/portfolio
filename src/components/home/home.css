@@ -17,8 +17,23 @@
 
 .home__social-icon{
     font-size: 1.25rem;
-    color: var(--title-color);
+    color: var(--text-color);
 }
+.home__social-icon:first-child:hover{
+    color: #3975ea;
+}
+.home__social-icon:nth-child(2):hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.home__social-icon:nth-child(3):hover{
+    color: #2d64bc;
+}
+
+
 
 .home__social-icon:hover{
     color: var(--title-color-dark);

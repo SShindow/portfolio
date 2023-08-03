@@ -11,8 +11,11 @@ import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollToTop from './components/scrolltotop/ScrollToTop';
+import { useEffect } from 'react';
 
 const App = () => {
+
+
   return (
     <>
       <Header />
