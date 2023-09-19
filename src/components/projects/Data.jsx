@@ -4,8 +4,16 @@ import Work3 from "../../assets/work3.png";
 import Work4 from "../../assets/work4.png";
 import Work5 from "../../assets/work5.png";
 import Work6 from "../../assets/work6.png";
+import Work7 from "../../assets/work7.png";
 
 export const projectsData = [
+    {
+        id: 7,
+        image: Work7,
+        title: "Smoll URL",
+        category: "web",
+        link: "https://github.com/SShindow/smoll-url",
+    },
     {
         id: 1,
         image: Work1,
