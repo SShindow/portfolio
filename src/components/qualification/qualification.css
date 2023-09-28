@@ -1,6 +1,6 @@
 
 .qualification__container{
-    max-width: 768px;
+    max-width: 1024px;
 }
 
 .qualification__tabs{
@@ -49,6 +49,14 @@
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     column-gap: 1.5rem;
+}
+
+.qualification-exp__data:nth-child(even){
+    text-align: right;
+}
+
+.qualification-exp__data:nth-child(odd){
+    text-align: left;
 }
 
 .qualification-exp__title{

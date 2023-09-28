@@ -418,14 +418,14 @@ const Qualification = () => {
             </div>
           </div>
 
-          {/* <div
+          <div
             className={
               toggleState === 2
                 ? "qualification__content qualification__content-active"
                 : "qualification__content"
             }
           >
-            <div className="qualification-exp__data">
+            {/* <div className="qualification-exp__data">
               <div>
                 <h3 className="qualification-exp__title">Software Engineer </h3>
                 <span className="qualification-exp__subtitle">Microsoft</span>
@@ -532,7 +532,7 @@ const Qualification = () => {
                 <span className="qualification-exp__rounder"></span>
                 <span className="qualification-exp__line"></span>
               </div>
-            </div>
+            </div> */}
 
             <div className="qualification-exp__data">
               <div></div>
@@ -546,9 +546,9 @@ const Qualification = () => {
                 <h3 className="qualification-exp__title">
                   Software Engineer Intern
                 </h3>
-                <span className="qualification-exp__subtitle">ABC</span>
+                <span className="qualification-exp__subtitle">Data Center - VNU.HCM ITP</span>
                 <div className="qualification-exp__calendar">
-                  <i class="uil uil-calendar-alt"></i> 2019 - 2022
+                  <i class="uil uil-calendar-alt"></i> 2023 - Current
                 </div>
                 <span
                   className="qualification-edu__button"
@@ -575,7 +575,7 @@ const Qualification = () => {
                       Software Engineer Intern
                     </h3>
                     <p className="qualification-exp__modal-description">
-                      Microsoft
+                      Data Center - VNU.HCM ITP
                     </p>
 
                     <ul className="qualification-exp__modal-services grid">
@@ -584,7 +584,7 @@ const Qualification = () => {
                           Durarion:{" "}
                         </h4>
                         <p className="qualification-exp__modal-info">
-                          2016 - 2019
+                          2023 - Current
                         </p>
 
                         <h4
@@ -649,10 +649,10 @@ const Qualification = () => {
 
             <div className="qualification-exp__data">
               <div>
-                <h3 className="qualification-exp__title">Content Creator</h3>
-                <span className="qualification-exp__subtitle">Freelancer</span>
+                <h3 className="qualification-exp__title">Sales Agent</h3>
+                <span className="qualification-exp__subtitle">Robins</span>
                 <div className="qualification-exp__calendar">
-                  <i class="uil uil-calendar-alt"></i> 2016 - 2019
+                  <i class="uil uil-calendar-alt"></i> 2016
                 </div>
                 <span
                   className="qualification-edu__button"
@@ -755,7 +755,7 @@ const Qualification = () => {
                 <span className="qualification-exp__line"></span>
               </div>
             </div>
-          </div> */}
+          </div>
 
           <div
             className={
